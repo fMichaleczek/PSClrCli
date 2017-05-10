@@ -16,7 +16,7 @@ $CWindow = CWindow -Id Window {
 		CLabel -Text ("ComputerName : {0} / UserName : {1}" -f $env:ComputerName, $env:UserName) -Top 0 -Left 3  -Foreground Black -BackgroundColor Gray
 	}
 
-    CTinySpinner -Id TinySpinner -Top 1 -Left 0 -Width 1 -Height 1 -Visible:$False -BackgroundColor Gray -Foreground DarkGray 
+    CTinySpinner -Id TinySpinner -Top 1 -Left 0 -Width 1 -Height 1 -Visible:$False -BackgroundColor Gray -Foreground DarkGray
 	
     CSpinner -Id Spinner -Top 0 -Left 1 -Width 3 -Height 3 -Visible:$False -BackgroundColor Gray -Foreground DarkGray 
 	

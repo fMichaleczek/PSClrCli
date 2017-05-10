@@ -54,6 +54,7 @@ $Module = @{
 	Pattern = @{
 		ModuleFile = @"
 #requires -Version 5`n`n
+Add-Type -Path `$PSScriptRoot\ClrCli.dll
 {0}`n`n
 {1}`n`n
 {2}`n`n
