@@ -1,9 +1,9 @@
 Remove-Module PSReadLine -Force -ErrorAction SilentlyContinue
 Clear-Host
 if ( -not ( Get-Module PSClrCli ) ) { Import-Module PSClrCli }
-
+$Splat = @{ Top = 4 ; Left = 4 ; Width = 60  ; Height = 32 ; Border = 'Thick' }
 $CWindow = CWindow -Id Window {
-	CDialog -Id Dialog -Text "List Running Processes" -Top 4 -Left 4 -Width 60 -Height 32 -Border Thick {
+	CDialog -Id Dialog -Text "List Running Processes" @Splat {
 		CLabel -Text 'Running Processes' -Top 2 -Left 2
 		CButton -Text 'Get Processes' -Top 4 -Left 6  -Width 25 -OnClicked { 
 			Get-Process | Select -Unique ProcessName | Select -ExpandProperty ProcessName | Foreach {
